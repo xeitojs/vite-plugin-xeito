@@ -7,7 +7,9 @@
     "playground/*"
   ],
   "scripts": {
-    "build": "npm --prefix packages/vite-plugin-xeito run build"
+    "build": "npm --prefix packages/vite-plugin-xeito run build",
+    "version": "node scripts/version-bump.mjs",
+    "publish": "node scripts/publish.mjs"
   },
   "repository": {
     "type": "git",
@@ -23,5 +25,8 @@
   "bugs": {
     "url": "https://github.com/xeitojs/vite-plugin/issues"
   },
-  "homepage": "https://github.com/xeitojs/vite-plugin#readme"
+  "homepage": "https://github.com/xeitojs/vite-plugin#readme",
+  "dependencies": {
+    "commit-and-tag-version": "^11.1.0"
+  }
 }
