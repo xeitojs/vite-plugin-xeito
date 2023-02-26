@@ -12,6 +12,9 @@
     },
     "./package.json": "./package.json"
   },
+  "files": [
+    "dist"
+  ],
   "scripts": {
     "build": "rimraf dist && tsup src/index.ts --format esm --dts --sourcemap"
   },
