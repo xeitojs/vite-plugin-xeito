@@ -1,0 +1,27 @@
+{
+  "name": "vite-plugin-xeito",
+  "version": "0.0.1",
+  "description": "Vite plugin for Xeito Framework",
+  "workspaces": [
+    "packages/*",
+    "playground/*"
+  ],
+  "scripts": {
+    "build": "npm --prefix packages/vite-plugin-xeito run build"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/xeitojs/vite-plugin.git"
+  },
+  "keywords": [
+    "vite",
+    "plugin",
+    "xeito"
+  ],
+  "author": "Samuel Bazaga",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/xeitojs/vite-plugin/issues"
+  },
+  "homepage": "https://github.com/xeitojs/vite-plugin#readme"
+}
