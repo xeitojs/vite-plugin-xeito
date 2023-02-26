@@ -1,6 +1,6 @@
 {
   "name": "@xeito/vite-plugin-xeito",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "Vite plugin for Xeito Framework",
   "main": "dist/index.js",
   "type": "module",
