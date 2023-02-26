@@ -2,9 +2,6 @@ import typescript from 'typescript';
 
 export async function xeitoPlugin() {
 
-  // Load the tsconfig.json file
-  const tsConfig = await typescript.readConfigFile('tsconfig.json', typescript.sys.readFile);
-
   return {
     name: 'xeito-plugin',
     enforce: 'pre', // We must run this plugin before esbuild
@@ -16,8 +13,13 @@ export async function xeitoPlugin() {
         if (decoratorRegex.test(code)) {
           // If it does, we compile it with the typescript compiler
           // This is done because esbuild generates incompatible code (unclear why)
-
-          const compiled = typescript.transpileModule(code, tsConfig.config);
+          const compiled = typescript.transpileModule(code, {
+            compilerOptions: {
+              target: typescript.ScriptTarget.ES2020,
+              module: typescript.ModuleKind.ES2020,
+              isolatedModules: true,
+            }
+          });
           
           // Return the compiled code and the source map
           return {
